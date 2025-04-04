@@ -65,7 +65,16 @@ const Header = () => {
               >
                 Tecnologia
               </a>
-              <Link to="#clients" className="nav-link text-white hover:text-ds3-gold">Clientes</Link>
+              <a 
+                href="#clients" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('clients');
+                }}
+                className="nav-link text-white hover:text-ds3-gold cursor-pointer"
+              >
+                Clientes
+              </a>
               <Link to="#contact" className="nav-link text-white hover:text-ds3-gold">Contato</Link>
               
               <Link to="/linha-profissional" className="ml-4 bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-6 py-2 rounded font-medium transition-all">
@@ -112,7 +121,16 @@ const Header = () => {
             >
               Tecnologia
             </a>
-            <Link to="#clients" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Clientes</Link>
+            <a 
+              href="#clients" 
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('clients');
+              }}
+              className="text-white hover:text-ds3-gold cursor-pointer"
+            >
+              Clientes
+            </a>
             <Link to="#contact" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Contato</Link>
             
             <Link 

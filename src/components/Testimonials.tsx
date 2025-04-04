@@ -1,37 +1,64 @@
-import React, { useState } from 'react';
-import { Star, ArrowLeft, ArrowRight } from 'lucide-react';
-const testimonials = [{
-  id: 1,
-  name: 'Elina Santos',
-  position: 'Diretora da BJT Transportadora',
-  content: 'A ContaPlus tem se mostrado extremamente pontual na entrega de documentos e o suporte é sempre atencioso. Recomendo a todos que procuram um serviço contábil confiável.',
-  rating: 5,
-  image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
-}, {
-  id: 2,
-  name: 'Joel Gomes',
-  position: 'Administrador da Torque Implementos',
-  content: 'O comprometimento da equipe da ContaPlus com a satisfação do cliente é notável. Eles sempre atendem às necessidades da nossa empresa com excelência e profissionalismo.',
-  rating: 5,
-  image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
-}, {
-  id: 3,
-  name: 'João Meneses',
-  position: 'Diretor da Ágil Mecânica',
-  content: 'O atendimento da ContaPlus é prestativo, sempre esclarecendo nossas dúvidas. Os serviços prestados são excelentes e nos ajudam a manter nosso negócio em ordem.',
-  rating: 5,
-  image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
-}];
+
+import React from 'react';
+
+const clients = [
+  {
+    id: 1,
+    name: 'Connectta Construções',
+    logo: '/lovable-uploads/85768f32-4b9e-475e-a910-18f52c230057.png',
+    logoPosition: 'object-left',
+  },
+  {
+    id: 2,
+    name: 'STX Marine Service',
+    logo: '/lovable-uploads/85768f32-4b9e-475e-a910-18f52c230057.png',
+    logoPosition: 'object-center-left',
+  },
+  {
+    id: 3,
+    name: 'GB Consultoria',
+    logo: '/lovable-uploads/85768f32-4b9e-475e-a910-18f52c230057.png',
+    logoPosition: 'object-center-right',
+  },
+  {
+    id: 4,
+    name: 'LCD Engenharia',
+    logo: '/lovable-uploads/85768f32-4b9e-475e-a910-18f52c230057.png',
+    logoPosition: 'object-right',
+  },
+];
+
 const Testimonials = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const nextTestimonial = () => {
-    setActiveIndex(prev => (prev + 1) % testimonials.length);
-  };
-  const prevTestimonial = () => {
-    setActiveIndex(prev => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-  return <section className="section bg-white">
-      
-    </section>;
+  return (
+    <section id="clients" className="section bg-white py-20">
+      <div className="container-custom">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-ds3-dark mb-6">Nossos Principais Clientes</h2>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {clients.map((client) => (
+            <div 
+              key={client.id}
+              className="bg-white shadow-sm hover:shadow-md transition-all p-8 rounded-lg flex items-center justify-center h-48"
+            >
+              <img 
+                src={client.logo} 
+                alt={client.name}
+                className={`max-h-32 ${client.logoPosition}`}
+                style={{
+                  objectFit: 'contain',
+                  objectPosition: client.logoPosition === 'object-left' ? '0% 50%' : 
+                                 client.logoPosition === 'object-center-left' ? '33% 50%' :
+                                 client.logoPosition === 'object-center-right' ? '66% 50%' : '100% 50%'
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default Testimonials;

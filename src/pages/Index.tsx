@@ -28,7 +28,6 @@ const Index = () => {
         <Services />
         <AboutUs />
         <Team />
-        {/* Remove the Plans component to fix the build error */}
         <Testimonials />
         <Contact />
       </main>
