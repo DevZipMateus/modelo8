@@ -1,51 +1,64 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useIsMobile } from '../hooks/use-mobile';
+import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const isMobile = useIsMobile();
   
   return (
-    <section className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-ds3-dark to-neutral-800 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1520694478166-daaaaec95b69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')] bg-cover bg-center opacity-20"></div>
-      
-      {/* Decorative elements */}
-      <div className="absolute top-40 right-10 w-72 h-72 bg-ds3-gold/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 w-72 h-72 bg-ds3-gold/20 rounded-full blur-3xl"></div>
+    <section className="relative h-screen min-h-[600px] flex items-center">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+          alt="Industrial worker" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-ds3-dark/70"></div>
+      </div>
       
       <div className="container-custom relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-white leading-tight mb-6 animate-fade-in`} style={{
-            animationDelay: '0.1s'
-          }}>
+        <div className="max-w-4xl">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 animate-fade-in">
             Excelência em Proteção
           </h1>
           
-          <p className="text-lg text-ds3-gold mb-10 animate-fade-in" style={{
-            animationDelay: '0.2s'
-          }}>
-            Uniformes profissionais personalizados e soluções têxteis para diversos setores do mercado.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{
-            animationDelay: '0.3s'
-          }}>
-            <a href="https://wa.me/552221412489" target="_blank" rel="noopener noreferrer" className="bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium">
-              <span>Solicitar Orçamento</span>
-            </a>
-            <a href="#services" className="btn-secondary">
-              Nossos produtos
-            </a>
+          <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <Link to="/linha-profissional" className="bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-8 py-3 rounded font-medium text-lg transition-all">
+              VER SOLUÇÕES
+            </Link>
+            
+            <Link to="#about" className="bg-transparent border border-white text-white hover:bg-white/10 px-8 py-3 rounded font-medium text-lg transition-all">
+              SOBRE A DS3
+            </Link>
+          </div>
+
+          {/* Service Categories */}
+          <div className="mt-24 md:mt-32 grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <Link to="/enxoval-offshore" className="flex items-center bg-black/30 backdrop-blur-sm hover:bg-black/40 p-4 rounded-lg transition-all group">
+              <div className="w-12 h-12 mr-3 bg-ds3-gold/20 rounded-full flex items-center justify-center">
+                <img src="/lovable-uploads/87e15858-fe61-4896-852e-32125d20e4af.png" alt="Offshore" className="w-6 h-6 opacity-70" />
+              </div>
+              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors">Enxovais Offshore & Onshore</span>
+            </Link>
+            
+            <Link to="/enxoval-hospitalar" className="flex items-center bg-black/30 backdrop-blur-sm hover:bg-black/40 p-4 rounded-lg transition-all group">
+              <div className="w-12 h-12 mr-3 bg-ds3-gold/20 rounded-full flex items-center justify-center">
+                <img src="/lovable-uploads/87e15858-fe61-4896-852e-32125d20e4af.png" alt="Hospital" className="w-6 h-6 opacity-70" />
+              </div>
+              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors">Enxovais Hospitalares</span>
+            </Link>
+            
+            <Link to="/linha-profissional" className="flex items-center bg-black/30 backdrop-blur-sm hover:bg-black/40 p-4 rounded-lg transition-all group">
+              <div className="w-12 h-12 mr-3 bg-ds3-gold/20 rounded-full flex items-center justify-center">
+                <img src="/lovable-uploads/87e15858-fe61-4896-852e-32125d20e4af.png" alt="Professional" className="w-6 h-6 opacity-70" />
+              </div>
+              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors">Linha Profissional</span>
+            </Link>
           </div>
         </div>
-      </div>
-      
-      {/* Wave decoration */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" className="w-full h-auto">
-          <path fill="#ffffff" fillOpacity="1" d="M0,32L80,37.3C160,43,320,53,480,58.7C640,64,800,64,960,53.3C1120,43,1280,21,1360,10.7L1440,0L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z">
-          </path>
-        </svg>
       </div>
     </section>
   );

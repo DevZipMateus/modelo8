@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, Facebook, Instagram, Twitter, Linkedin, Menu, X } from 'lucide-react';
+import { Mail, Phone, Menu, X } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
 
 const Header = () => {
@@ -29,78 +29,104 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-white py-4'}`}>
-      {/* Top Bar with Contact Info and Social Media */}
-      <div className="container-custom">
-        <div className="flex flex-col md:flex-row md:justify-between items-center mb-4 md:mb-2">
-          {/* Contact Information */}
-          <div className="flex flex-col md:flex-row md:space-x-6 text-sm text-gray-600 mb-2 md:mb-0 items-center">
-            <a href="mailto:contato@d3sengenharia.com.br" className="flex items-center hover:text-ds3-gold transition-colors duration-300 mb-1 md:mb-0">
-              <Mail size={16} className="mr-2" />
-              contato@d3sengenharia.com.br
-            </a>
-            <a href="tel:+552221412489" className="flex items-center hover:text-ds3-gold transition-colors duration-300 whitespace-nowrap">
-              <Phone size={16} className="mr-2" />
-              (22) 2141-2489
-            </a>
-          </div>
-          
-          {/* Social Media Icons */}
-          <div className="flex space-x-4">
-            <a href="#" className="text-gray-500 hover:text-ds3-gold transition-colors duration-300">
-              <Facebook size={18} />
-            </a>
-            <a href="#" className="text-gray-500 hover:text-ds3-gold transition-colors duration-300">
-              <Instagram size={18} />
-            </a>
-            <a href="#" className="text-gray-500 hover:text-ds3-gold transition-colors duration-300">
-              <Twitter size={18} />
-            </a>
-            <a href="#" className="text-gray-500 hover:text-ds3-gold transition-colors duration-300">
-              <Linkedin size={18} />
-            </a>
-          </div>
-        </div>
-        
-        {/* Main Navigation */}
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/" className="text-2xl font-semibold transition-all duration-300 transform hover:scale-[1.02] flex items-center">
-            <img src="/lovable-uploads/b59f931d-d236-43bf-97a4-bea078868c6b.png" alt="DS3 Engenharia" className="h-14" />
-          </Link>
-          
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-1">
-            <Link to="/" className="nav-link">Início</Link>
-            <a href="#about" className="nav-link">Sobre Nós</a>
-            <Link to="/linha-profissional" className="nav-link">Linha Profissional</Link>
-            <Link to="/enxoval-offshore" className="nav-link">Enxoval Offshore</Link>
-            <Link to="/enxoval-hospitalar" className="nav-link">Enxoval Hospitalar</Link>
-            <a href="#contact" className="nav-link">Contato</a>
-          </nav>
-          
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-gray-600 hover:text-ds3-gold focus:outline-none"
-            onClick={toggleMobileMenu}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+    <>
+      {/* Top Bar */}
+      <div className="bg-ds3-dark text-white py-2">
+        <div className="container-custom flex justify-end items-center gap-6">
+          <a href="tel:+552221412489" className="flex items-center text-sm hover:text-ds3-gold transition-colors">
+            <Phone size={16} className="mr-2" />
+            (22) 2141-2489
+          </a>
+          <a href="mailto:contato@d3sengenharia.com.br" className="flex items-center text-sm hover:text-ds3-gold transition-colors">
+            <Mail size={16} className="mr-2" />
+            contato@d3sengenharia.com.br
+          </a>
         </div>
       </div>
       
+      {/* Main Header */}
+      <header className={`fixed top-10 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-4'}`}>
+        <div className="container-custom">
+          <div className="flex justify-between items-center">
+            {/* Logo */}
+            <Link to="/" className="text-2xl font-semibold transition-all duration-300 transform hover:scale-[1.02]">
+              <img src="/lovable-uploads/b59f931d-d236-43bf-97a4-bea078868c6b.png" alt="DS3 Engenharia" className="h-12" />
+            </Link>
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-6">
+              <Link to="/" className="nav-link text-white hover:text-ds3-gold">Sobre a DS3</Link>
+              <div className="relative group">
+                <Link to="#services" className="nav-link text-white hover:text-ds3-gold flex items-center">
+                  Soluções
+                </Link>
+              </div>
+              <Link to="#technology" className="nav-link text-white hover:text-ds3-gold">Tecnologia</Link>
+              <Link to="#clients" className="nav-link text-white hover:text-ds3-gold">Clientes</Link>
+              <Link to="#contact" className="nav-link text-white hover:text-ds3-gold">Contato</Link>
+              
+              <Link to="/linha-profissional" className="ml-4 bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-6 py-2 rounded font-medium transition-all">
+                VER SOLUÇÕES
+              </Link>
+            </nav>
+            
+            {/* Mobile Menu Button */}
+            <button 
+              className="md:hidden text-white hover:text-ds3-gold focus:outline-none"
+              onClick={toggleMobileMenu}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+      </header>
+      
       {/* Mobile Navigation Menu */}
-      <div className={`md:hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}>
-        <div className="container-custom py-4 flex flex-col space-y-3 border-t mt-4">
-          <Link to="/" className="px-4 py-2 text-gray-700 hover:text-ds3-gold hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Início</Link>
-          <a href="#about" className="px-4 py-2 text-gray-700 hover:text-ds3-gold hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Sobre Nós</a>
-          <Link to="/linha-profissional" className="px-4 py-2 text-gray-700 hover:text-ds3-gold hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Linha Profissional</Link>
-          <Link to="/enxoval-offshore" className="px-4 py-2 text-gray-700 hover:text-ds3-gold hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Enxoval Offshore</Link>
-          <Link to="/enxoval-hospitalar" className="px-4 py-2 text-gray-700 hover:text-ds3-gold hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Enxoval Hospitalar</Link>
-          <a href="#contact" className="px-4 py-2 text-gray-700 hover:text-ds3-gold hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Contato</a>
+      <div className={`fixed top-0 left-0 w-full h-full bg-ds3-dark z-50 transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="container-custom py-4 h-full flex flex-col">
+          <div className="flex justify-between items-center mb-8 pt-4">
+            <Link to="/" className="text-2xl font-semibold" onClick={() => setIsMobileMenuOpen(false)}>
+              <img src="/lovable-uploads/b59f931d-d236-43bf-97a4-bea078868c6b.png" alt="DS3 Engenharia" className="h-12" />
+            </Link>
+            <button 
+              className="text-white hover:text-ds3-gold focus:outline-none"
+              onClick={toggleMobileMenu}
+            >
+              <X size={24} />
+            </button>
+          </div>
+          
+          <div className="flex flex-col space-y-6 text-lg">
+            <Link to="/" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Sobre a DS3</Link>
+            <Link to="#services" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Soluções</Link>
+            <Link to="#technology" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Tecnologia</Link>
+            <Link to="#clients" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Clientes</Link>
+            <Link to="#contact" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Contato</Link>
+            
+            <Link 
+              to="/linha-profissional" 
+              className="bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-6 py-3 rounded font-medium transition-all text-center mt-4"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              VER SOLUÇÕES
+            </Link>
+          </div>
+          
+          <div className="mt-auto pb-8">
+            <div className="text-white/70 space-y-4">
+              <a href="tel:+552221412489" className="flex items-center text-sm hover:text-ds3-gold transition-colors">
+                <Phone size={16} className="mr-2" />
+                (22) 2141-2489
+              </a>
+              <a href="mailto:contato@d3sengenharia.com.br" className="flex items-center text-sm hover:text-ds3-gold transition-colors">
+                <Mail size={16} className="mr-2" />
+                contato@d3sengenharia.com.br
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
+    </>
   );
 };
 
