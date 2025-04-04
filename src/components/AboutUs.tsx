@@ -88,8 +88,8 @@ const AboutUs = () => {
             <div className="lg:w-1/2">
               <div className="relative">
                 <img 
-                  src="public/lovable-uploads/679ef696-bd6b-4dd6-930a-adec329000b4.png" 
-                  alt="Trabalhador offshore com equipamento de proteção" 
+                  src="public/lovable-uploads/316e393f-ec3b-4147-a10b-0b6f433bf9b1.png" 
+                  alt="Trabalhador offshore com equipamento de proteção em plataforma petrolífera" 
                   className="rounded-lg w-full object-cover h-[400px]" 
                 />
               </div>
