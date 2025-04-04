@@ -1,33 +1,98 @@
+
 import React from 'react';
-import { Linkedin, Mail } from 'lucide-react';
-const team = [{
-  id: 1,
-  name: 'Maria Silva',
-  role: 'Diretora',
-  image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
-  delay: '0s'
-}, {
-  id: 2,
-  name: 'Joel Antônio',
-  role: 'Contador',
-  image: 'https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  delay: '0.1s'
-}, {
-  id: 3,
-  name: 'Jéssica Souza',
-  role: 'Contadora',
-  image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=461&q=80',
-  delay: '0.2s'
-}, {
-  id: 4,
-  name: 'Luiz Ricardo',
-  role: 'Designer',
-  image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  delay: '0.3s'
-}];
+import { Target, ThumbsUp, Users, Award, ShieldCheck, UserCheck } from 'lucide-react';
+
 const Team = () => {
-  return <section className="section bg-white">
-      
-    </section>;
+  return (
+    <section id="team" className="section bg-white py-20">
+      <div className="container-custom">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Nossa Missão */}
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="mb-6">
+              <Target className="w-16 h-16 text-gray-500" />
+            </div>
+            <h2 className="text-4xl font-bold text-ds3-dark mb-6">Nossa Missão</h2>
+            <p className="text-gray-600 text-lg mb-4">
+              A nossa missão é proteger vidas, oferecendo produtos com qualidade, 
+              desenvolvidos de forma inovadora e com atendimento ágil às necessidade dos 
+              nossos consumidores.
+            </p>
+            <p className="text-gray-600 text-lg">
+              A D3S Engenharia traz inovação, sempre garantindo conforto e maior proteção 
+              em conformidade com as vestimentas NR10, para os usuário da indústria, do 
+              segmento de óleo e gás, entre outros.
+            </p>
+          </div>
+          
+          {/* Nossos Valores */}
+          <div className="flex flex-col">
+            <div className="flex items-center justify-center lg:justify-start mb-6">
+              <ThumbsUp className="w-16 h-16 text-gray-500" />
+            </div>
+            <h2 className="text-4xl font-bold text-ds3-dark mb-8">Nossos Valores</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Clientes */}
+              <div className="flex">
+                <div className="bg-ds3-gold/40 p-4 mr-4 flex items-center justify-center rounded-md">
+                  <Users className="w-8 h-8 text-ds3-dark" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl mb-2">Clientes</h3>
+                  <p className="text-gray-600">Sempre priorizar os nossos clientes.</p>
+                </div>
+              </div>
+              
+              {/* Responsabilidade */}
+              <div className="flex">
+                <div className="bg-ds3-gold/40 p-4 mr-4 flex items-center justify-center rounded-md">
+                  <ShieldCheck className="w-8 h-8 text-ds3-dark" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl mb-2">Responsabilidade</h3>
+                  <p className="text-gray-600">Entregas com responsabilidade.</p>
+                </div>
+              </div>
+              
+              {/* Excelência */}
+              <div className="flex">
+                <div className="bg-ds3-gold/40 p-4 mr-4 flex items-center justify-center rounded-md">
+                  <Award className="w-8 h-8 text-ds3-dark" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl mb-2">Excelência</h3>
+                  <p className="text-gray-600">Focar nos clientes.</p>
+                </div>
+              </div>
+              
+              {/* Ética */}
+              <div className="flex">
+                <div className="bg-ds3-gold/40 p-4 mr-4 flex items-center justify-center rounded-md">
+                  <UserCheck className="w-8 h-8 text-ds3-dark" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl mb-2">Ética</h3>
+                  <p className="text-gray-600">Preço justo.</p>
+                </div>
+              </div>
+              
+              {/* Trabalho em Equipe */}
+              <div className="flex md:col-span-2 md:max-w-xs">
+                <div className="bg-ds3-gold/40 p-4 mr-4 flex items-center justify-center rounded-md">
+                  <Users className="w-8 h-8 text-ds3-dark" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl mb-2">Trabalho em Equipe</h3>
+                  <p className="text-gray-600">Qualidade e desenvolvimento.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default Team;
