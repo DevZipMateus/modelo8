@@ -5,26 +5,26 @@ const clients = [
   {
     id: 1,
     name: 'Connectta Construções',
-    logo: '/lovable-uploads/85768f32-4b9e-475e-a910-18f52c230057.png',
-    logoPosition: 'object-left',
+    logo: '/lovable-uploads/b9950941-a70e-4ee7-a531-45cbe9bc9316.png',
+    logoPosition: 'object-center',
   },
   {
     id: 2,
     name: 'STX Marine Service',
-    logo: '/lovable-uploads/85768f32-4b9e-475e-a910-18f52c230057.png',
-    logoPosition: 'object-center-left',
+    logo: '/lovable-uploads/927e0725-56fb-4463-befd-da92c342382b.png',
+    logoPosition: 'object-center',
   },
   {
     id: 3,
     name: 'GB Consultoria',
-    logo: '/lovable-uploads/85768f32-4b9e-475e-a910-18f52c230057.png',
-    logoPosition: 'object-center-right',
+    logo: '/lovable-uploads/a8116b37-2da2-4557-843f-12e97c5e263a.png',
+    logoPosition: 'object-center',
   },
   {
     id: 4,
     name: 'LCD Engenharia',
-    logo: '/lovable-uploads/85768f32-4b9e-475e-a910-18f52c230057.png',
-    logoPosition: 'object-right',
+    logo: '/lovable-uploads/8bee2908-b9ca-44a1-b4db-e793722d1dce.png',
+    logoPosition: 'object-center',
   },
 ];
 
@@ -45,13 +45,7 @@ const Testimonials = () => {
               <img 
                 src={client.logo} 
                 alt={client.name}
-                className={`max-h-32 ${client.logoPosition}`}
-                style={{
-                  objectFit: 'contain',
-                  objectPosition: client.logoPosition === 'object-left' ? '0% 50%' : 
-                                 client.logoPosition === 'object-center-left' ? '33% 50%' :
-                                 client.logoPosition === 'object-center-right' ? '66% 50%' : '100% 50%'
-                }}
+                className="max-h-32 object-contain"
               />
             </div>
           ))}
