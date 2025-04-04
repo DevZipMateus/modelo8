@@ -38,8 +38,8 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Main Header - Making it fully transparent */}
-      <header className="absolute w-full bg-transparent z-10">
+      {/* Main Header - Making it fully transparent and positioned lower */}
+      <header className="absolute w-full bg-transparent z-10 top-10">
         <div className="container-custom py-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
