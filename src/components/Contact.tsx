@@ -86,21 +86,37 @@ const Contact = () => {
         <div className="mt-12 bg-white rounded-xl shadow-sm p-8 max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Address */}
-            <div className="flex items-start">
-              <div className="bg-neutral-100 p-3 rounded-full mr-4 flex-shrink-0">
-                <MapPin className="text-ds3-dark" size={24} />
+            <div>
+              <div className="flex items-start mb-6">
+                <div className="bg-neutral-100 p-3 rounded-full mr-4 flex-shrink-0">
+                  <MapPin className="text-ds3-dark" size={24} />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-neutral-900 mb-2">Endereço</h4>
+                  <p className="text-neutral-600">R. Elísio Dias Curvelo, 211 - Parque Aeroporto, Macaé - RJ, 27963-604</p>
+                  <a 
+                    href="https://www.google.com/maps/place/R.+El%C3%ADsio+Dias+Curvelo,+211+-+Parque+Aeroporto,+Maca%C3%A9+-+RJ,+27963-604,+Brasil/@-22.338085,-41.758262,12z/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-ds3-dark hover:text-ds3-gold transition-colors duration-300 mt-2 inline-block"
+                  >
+                    Ver no mapa
+                  </a>
+                </div>
               </div>
-              <div>
-                <h4 className="text-lg font-semibold text-neutral-900 mb-2">Endereço</h4>
-                <p className="text-neutral-600">R. Elísio Dias Curvelo, 211 - Parque Aeroporto, Macaé - RJ, 27963-604</p>
-                <a 
-                  href="https://www.google.com/maps/place/R.+El%C3%ADsio+Dias+Curvelo,+211+-+Parque+Aeroporto,+Maca%C3%A9+-+RJ,+27963-604,+Brasil/@-22.338085,-41.758262,12z/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-ds3-dark hover:text-ds3-gold transition-colors duration-300 mt-2 inline-block"
-                >
-                  Ver no mapa
-                </a>
+              
+              {/* Google Maps Embed */}
+              <div className="w-full h-64 mt-4 rounded-lg overflow-hidden">
+                <iframe 
+                  src="https://www.google.com/maps?q=R.+El%C3%ADsio+Dias+Curvelo,+211+-+Parque+Aeroporto+Maca%C3%A9+-+RJ+27963-604&output=embed"
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização da DS3 Engenharia"
+                ></iframe>
               </div>
             </div>
             
