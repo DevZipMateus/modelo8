@@ -12,6 +12,16 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <>
       {/* Top Bar - Fixed at the top */}
@@ -45,7 +55,16 @@ const Header = () => {
                   Soluções
                 </Link>
               </div>
-              <Link to="#technology" className="nav-link text-white hover:text-ds3-gold">Tecnologia</Link>
+              <a 
+                href="#technology" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('technology');
+                }}
+                className="nav-link text-white hover:text-ds3-gold cursor-pointer"
+              >
+                Tecnologia
+              </a>
               <Link to="#clients" className="nav-link text-white hover:text-ds3-gold">Clientes</Link>
               <Link to="#contact" className="nav-link text-white hover:text-ds3-gold">Contato</Link>
               
@@ -83,7 +102,16 @@ const Header = () => {
           <div className="flex flex-col space-y-6 text-lg">
             <Link to="/" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Sobre a DS3</Link>
             <Link to="#services" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Soluções</Link>
-            <Link to="#technology" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Tecnologia</Link>
+            <a 
+              href="#technology" 
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('technology');
+              }}
+              className="text-white hover:text-ds3-gold cursor-pointer"
+            >
+              Tecnologia
+            </a>
             <Link to="#clients" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Clientes</Link>
             <Link to="#contact" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Contato</Link>
             
