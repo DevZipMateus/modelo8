@@ -39,8 +39,8 @@ const Header = () => {
       </div>
       
       {/* Main Header - Making it fully transparent */}
-      <header className="bg-transparent py-4" style={{backgroundColor: 'transparent'}}>
-        <div className="container-custom">
+      <header className="absolute w-full bg-transparent z-10">
+        <div className="container-custom py-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link to="/" className="text-2xl font-semibold transition-all duration-300 transform hover:scale-[1.02]">

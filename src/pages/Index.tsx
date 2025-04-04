@@ -10,9 +10,6 @@ import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import FloatingButton from '../components/FloatingButton';
 
-// Remove Plans import or comment it out since it's causing a build error
-// import Plans from '../components/Plans';
-
 const Index = () => {
   // Scroll to top on page load
   useEffect(() => {
@@ -20,7 +17,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
       <Header />
       
       <main className="flex-grow">
