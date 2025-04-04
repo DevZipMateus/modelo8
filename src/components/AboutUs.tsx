@@ -66,8 +66,8 @@ const AboutUs = () => {
               <div className="relative">
                 <div className="bg-ds3-gold/20 w-full h-full absolute -left-6 -top-6 rounded-lg"></div>
                 <img 
-                  src="public/lovable-uploads/8489d763-22f5-4163-bc12-58652eb90464.png" 
-                  alt="Profissional de segurança com computador" 
+                  src="public/lovable-uploads/6264b6b2-1969-4152-ad50-5b330a3c76dd.png" 
+                  alt="Trabalhadora em armazém com tablet" 
                   className="relative z-10 rounded-lg shadow-lg w-full object-cover h-[400px]" 
                 />
               </div>
