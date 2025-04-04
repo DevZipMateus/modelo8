@@ -6,10 +6,12 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import AboutUs from '../components/AboutUs';
 import Team from '../components/Team';
-import Plans from '../components/Plans';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import FloatingButton from '../components/FloatingButton';
+
+// Remove Plans import or comment it out since it's causing a build error
+// import Plans from '../components/Plans';
 
 const Index = () => {
   // Scroll to top on page load
@@ -26,7 +28,7 @@ const Index = () => {
         <Services />
         <AboutUs />
         <Team />
-        <Plans />
+        {/* Remove the Plans component to fix the build error */}
         <Testimonials />
         <Contact />
       </main>
