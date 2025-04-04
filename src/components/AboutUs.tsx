@@ -106,7 +106,7 @@ const AboutUs = () => {
               <Card className="bg-ds3-dark border border-gray-700">
                 <CardContent className="p-6">
                   <p className="text-ds3-gold font-medium mb-2">ATPV - Arch Thermal Performance Value</p>
-                  <p>
+                  <p className="text-white">
                     As roupas são classificadas pelo ATPV – Arch Thermal Performance Value, que é 
                     a quantidade de calor, em cal/cm² que a roupa suporta diante do risco.
                   </p>
