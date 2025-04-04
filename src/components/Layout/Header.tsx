@@ -24,8 +24,8 @@ const Header = () => {
 
   return (
     <>
-      {/* Top Bar - Fixed at the top */}
-      <div className="bg-ds3-dark text-white py-2 fixed top-0 left-0 right-0 z-50">
+      {/* Top Bar - Now scrolls with the page */}
+      <div className="bg-ds3-dark text-white py-2">
         <div className="container-custom flex justify-end items-center gap-6">
           <a href="tel:+552221412489" className="flex items-center text-sm hover:text-ds3-gold transition-colors">
             <Phone size={16} className="mr-2" />
@@ -38,8 +38,8 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Main Header - Fixed below the top bar */}
-      <header className="fixed top-10 left-0 right-0 z-50 bg-transparent py-4">
+      {/* Main Header - Now scrolls with the page */}
+      <header className="bg-transparent py-4">
         <div className="container-custom">
           <div className="flex justify-between items-center">
             {/* Logo */}
