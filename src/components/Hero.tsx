@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '../hooks/use-mobile';
@@ -7,7 +8,7 @@ const Hero = () => {
   const isMobile = useIsMobile();
   
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center">
+    <section className="relative h-screen min-h-[600px] flex items-center pt-24">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
