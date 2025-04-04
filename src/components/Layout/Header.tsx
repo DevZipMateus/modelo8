@@ -38,7 +38,7 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Main Header - Now scrolls with the page */}
+      {/* Main Header - Making it transparent */}
       <header className="bg-transparent py-4">
         <div className="container-custom">
           <div className="flex justify-between items-center">
