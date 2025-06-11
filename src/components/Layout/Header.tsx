@@ -29,9 +29,9 @@ const Header = () => {
       {/* Top Bar - Now scrolls with the page */}
       <div className="bg-ds3-dark text-white py-1 sm:py-2">
         <div className="container-custom flex justify-end items-center gap-2 sm:gap-6">
-          <a href="mailto:contato@d3sengenharia.com.br" className="flex items-center text-xs sm:text-sm hover:text-ds3-gold transition-colors">
+          <a href="mailto:vendas@safeguardepis.com.br" className="flex items-center text-xs sm:text-sm hover:text-ds3-gold transition-colors">
             <Mail size={14} className="mr-1 sm:mr-2" />
-            <span className="hidden sm:inline">contato@d3sengenharia.com.br</span>
+            <span className="hidden sm:inline">vendas@safeguardepis.com.br</span>
             <span className="sm:hidden">Email</span>
           </a>
         </div>
@@ -43,22 +43,32 @@ const Header = () => {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link to="/" className="text-xl sm:text-2xl font-semibold transition-all duration-300 transform hover:scale-[1.02]">
-              <img src="/lovable-uploads/b59f931d-d236-43bf-97a4-bea078868c6b.png" alt="DS3 Engenharia" className="h-8 sm:h-12" />
+              <div className="flex items-center">
+                <div className="bg-ds3-gold text-ds3-dark px-3 py-2 rounded-lg font-bold text-lg sm:text-xl">
+                  SAFEGUARD EPIs
+                </div>
+              </div>
             </Link>
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
-              <Link to="/" className="nav-link text-white hover:text-ds3-gold text-sm xl:text-base">Sobre a DS3</Link>
-              <div className="relative group">
-                <Link to="#services" className="nav-link text-white hover:text-ds3-gold flex items-center text-sm xl:text-base">
-                  Soluções
-                </Link>
-              </div>
+              <a href="#about" onClick={e => {
+                e.preventDefault();
+                scrollToSection('about');
+              }} className="nav-link text-white hover:text-ds3-gold cursor-pointer text-sm xl:text-base">
+                Sobre Nós
+              </a>
+              <a href="#services" onClick={e => {
+                e.preventDefault();
+                scrollToSection('services');
+              }} className="nav-link text-white hover:text-ds3-gold cursor-pointer text-sm xl:text-base">
+                Produtos
+              </a>
               <a href="#technology" onClick={e => {
                 e.preventDefault();
                 scrollToSection('technology');
               }} className="nav-link text-white hover:text-ds3-gold cursor-pointer text-sm xl:text-base">
-                Tecnologia
+                Qualidade
               </a>
               <a href="#clients" onClick={e => {
                 e.preventDefault();
@@ -66,11 +76,19 @@ const Header = () => {
               }} className="nav-link text-white hover:text-ds3-gold cursor-pointer text-sm xl:text-base">
                 Clientes
               </a>
-              <Link to="#contact" className="nav-link text-white hover:text-ds3-gold text-sm xl:text-base">Contato</Link>
+              <a href="#contact" onClick={e => {
+                e.preventDefault();
+                scrollToSection('contact');
+              }} className="nav-link text-white hover:text-ds3-gold cursor-pointer text-sm xl:text-base">
+                Contato
+              </a>
               
-              <Link to="/linha-profissional" className="ml-2 xl:ml-4 bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-4 xl:px-6 py-2 rounded font-medium transition-all text-sm xl:text-base">
-                VER SOLUÇÕES
-              </Link>
+              <a href="#contact" onClick={e => {
+                e.preventDefault();
+                scrollToSection('contact');
+              }} className="ml-2 xl:ml-4 bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-4 xl:px-6 py-2 rounded font-medium transition-all text-sm xl:text-base">
+                SOLICITAR ORÇAMENTO
+              </a>
             </nav>
             
             {/* Mobile Menu Button */}
@@ -86,7 +104,9 @@ const Header = () => {
         <div className="container-custom py-4 h-full flex flex-col">
           <div className="flex justify-between items-center mb-8 pt-4">
             <Link to="/" className="text-xl font-semibold" onClick={() => setIsMobileMenuOpen(false)}>
-              <img src="/lovable-uploads/b59f931d-d236-43bf-97a4-bea078868c6b.png" alt="DS3 Engenharia" className="h-10" />
+              <div className="bg-ds3-gold text-ds3-dark px-3 py-2 rounded-lg font-bold">
+                SAFEGUARD EPIs
+              </div>
             </Link>
             <button className="text-white hover:text-ds3-gold focus:outline-none p-2" onClick={toggleMobileMenu}>
               <X size={20} />
@@ -94,13 +114,23 @@ const Header = () => {
           </div>
           
           <div className="flex flex-col space-y-6 text-base sm:text-lg">
-            <Link to="/" className="text-white hover:text-ds3-gold py-2" onClick={() => setIsMobileMenuOpen(false)}>Sobre a DS3</Link>
-            <Link to="#services" className="text-white hover:text-ds3-gold py-2" onClick={() => setIsMobileMenuOpen(false)}>Soluções</Link>
+            <a href="#about" onClick={e => {
+              e.preventDefault();
+              scrollToSection('about');
+            }} className="text-white hover:text-ds3-gold cursor-pointer py-2">
+              Sobre Nós
+            </a>
+            <a href="#services" onClick={e => {
+              e.preventDefault();
+              scrollToSection('services');
+            }} className="text-white hover:text-ds3-gold cursor-pointer py-2">
+              Produtos
+            </a>
             <a href="#technology" onClick={e => {
               e.preventDefault();
               scrollToSection('technology');
             }} className="text-white hover:text-ds3-gold cursor-pointer py-2">
-              Tecnologia
+              Qualidade
             </a>
             <a href="#clients" onClick={e => {
               e.preventDefault();
@@ -108,22 +138,30 @@ const Header = () => {
             }} className="text-white hover:text-ds3-gold cursor-pointer py-2">
               Clientes
             </a>
-            <Link to="#contact" className="text-white hover:text-ds3-gold py-2" onClick={() => setIsMobileMenuOpen(false)}>Contato</Link>
+            <a href="#contact" onClick={e => {
+              e.preventDefault();
+              scrollToSection('contact');
+            }} className="text-white hover:text-ds3-gold cursor-pointer py-2">
+              Contato
+            </a>
             
-            <Link to="/linha-profissional" className="bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-6 py-3 rounded font-medium transition-all text-center mt-4" onClick={() => setIsMobileMenuOpen(false)}>
-              VER SOLUÇÕES
-            </Link>
+            <a href="#contact" onClick={e => {
+              e.preventDefault();
+              scrollToSection('contact');
+            }} className="bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-6 py-3 rounded font-medium transition-all text-center mt-4" onClick={() => setIsMobileMenuOpen(false)}>
+              SOLICITAR ORÇAMENTO
+            </a>
           </div>
           
           <div className="mt-auto pb-8">
             <div className="text-white/70 space-y-4">
-              <a href="tel:+552221412489" className="flex items-center text-sm hover:text-ds3-gold transition-colors py-2">
+              <a href="tel:+5511987654321" className="flex items-center text-sm hover:text-ds3-gold transition-colors py-2">
                 <Phone size={16} className="mr-2" />
-                (22) 2141-2489
+                (11) 98765-4321
               </a>
-              <a href="mailto:contato@d3sengenharia.com.br" className="flex items-center text-sm hover:text-ds3-gold transition-colors py-2">
+              <a href="mailto:vendas@safeguardepis.com.br" className="flex items-center text-sm hover:text-ds3-gold transition-colors py-2">
                 <Mail size={16} className="mr-2" />
-                contato@d3sengenharia.com.br
+                vendas@safeguardepis.com.br
               </a>
             </div>
           </div>

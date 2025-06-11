@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -14,15 +13,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Phone className="mr-3 mt-1 flex-shrink-0 text-ds3-gold" size={18} />
-                <span>(22) 2141-2489</span>
+                <span>(11) 98765-4321</span>
               </li>
               <li className="flex items-start">
                 <Mail className="mr-3 mt-1 flex-shrink-0 text-ds3-gold" size={18} />
-                <span>contato@d3sengenharia.com.br</span>
+                <span>vendas@safeguardepis.com.br</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="mr-3 mt-1 flex-shrink-0 text-ds3-gold" size={18} />
-                <span>R. Elísio Dias Curvelo, 211 - Parque Aeroporto, Macaé - RJ, 27963-604</span>
+                <span>Rua da Segurança, 123 - Centro, São Paulo - SP, 01000-000</span>
               </li>
             </ul>
           </div>
@@ -32,19 +31,16 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-6">Links Rápidos</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="hover:text-ds3-gold transition-colors duration-300 inline-block">Início</Link>
-              </li>
-              <li>
                 <a href="#about" className="hover:text-ds3-gold transition-colors duration-300 inline-block">Sobre Nós</a>
               </li>
               <li>
-                <Link to="/linha-profissional" className="hover:text-ds3-gold transition-colors duration-300 inline-block">Linha Profissional</Link>
+                <a href="#services" className="hover:text-ds3-gold transition-colors duration-300 inline-block">Produtos</a>
               </li>
               <li>
-                <Link to="/enxoval-offshore" className="hover:text-ds3-gold transition-colors duration-300 inline-block">Enxoval Offshore</Link>
+                <a href="#technology" className="hover:text-ds3-gold transition-colors duration-300 inline-block">Qualidade</a>
               </li>
               <li>
-                <Link to="/enxoval-hospitalar" className="hover:text-ds3-gold transition-colors duration-300 inline-block">Enxoval Hospitalar</Link>
+                <a href="#clients" className="hover:text-ds3-gold transition-colors duration-300 inline-block">Clientes</a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-ds3-gold transition-colors duration-300 inline-block">Contato</a>
@@ -74,7 +70,7 @@ const Footer = () => {
         
         {/* Copyright */}
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-sm text-white/70">
-          <p>© {new Date().getFullYear()} DS3 Engenharia. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Safeguard EPIs. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

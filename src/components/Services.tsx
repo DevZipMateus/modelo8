@@ -1,32 +1,28 @@
 
 import React from 'react';
-import { Shirt, Building, HeartPulse, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Shield, HardHat, Eye, ArrowRight } from 'lucide-react';
 
 const services = [
   {
     id: 1,
-    title: 'Linha Profissional',
-    description: 'Macacões, calças, jalecos, camisas e blusas polo, masculino e feminino, além de uniformes de proteção NR10 Risco 2.',
-    icon: Shirt,
-    delay: '0s',
-    link: '/linha-profissional'
+    title: 'Proteção da Cabeça',
+    description: 'Capacetes de segurança, toucas e protetores auriculares para proteção completa da cabeça em ambientes industriais.',
+    icon: HardHat,
+    delay: '0s'
   },
   {
     id: 2,
-    title: 'Enxoval Offshore e Onshore',
-    description: 'Soluções têxteis completas para plataformas marítimas e instalações em terra, com foco em durabilidade e segurança.',
-    icon: Building,
-    delay: '0.1s',
-    link: '/enxoval-offshore'
+    title: 'Proteção Visual e Respiratória',
+    description: 'Óculos de proteção, máscaras, respiradores e filtros para ambientes com riscos químicos e particulados.',
+    icon: Eye,
+    delay: '0.1s'
   },
   {
     id: 3,
-    title: 'Enxoval Hospitalar',
-    description: 'Linha completa de produtos têxteis para o setor hospitalar, com garantia de qualidade e adequação às normas sanitárias.',
-    icon: HeartPulse,
-    delay: '0.2s',
-    link: '/enxoval-hospitalar'
+    title: 'Proteção Corporal Completa',
+    description: 'Luvas, calçados de segurança, cintos de segurança e vestimentas para proteção integral do trabalhador.',
+    icon: Shield,
+    delay: '0.2s'
   }
 ];
 
@@ -40,11 +36,11 @@ const Services = () => {
             Nossos Produtos
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 text-shadow-md">
-            Soluções têxteis completas para seu negócio
+            EPIs completos para sua segurança
           </h2>
           <p className="text-base sm:text-lg text-shadow text-gray-950">
-            Oferecemos produtos especializados para atender às necessidades específicas do seu setor, 
-            com qualidade e personalização.
+            Oferecemos equipamentos de proteção individual certificados para atender às necessidades específicas 
+            do seu ambiente de trabalho, com qualidade e segurança garantidas.
           </p>
         </div>
         
@@ -63,9 +59,9 @@ const Services = () => {
               </div>
               <h3 className="text-lg sm:text-xl font-semibold mb-3 text-gray-900 text-shadow-sm">{service.title}</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4 text-shadow-sm leading-relaxed">{service.description}</p>
-              <Link to={service.link} className="inline-flex items-center text-ds3-dark hover:text-ds3-gold font-medium transition-colors duration-300 text-shadow-sm text-sm sm:text-base">
-                Saiba mais <ArrowRight size={16} className="ml-1" />
-              </Link>
+              <a href="#contact" className="inline-flex items-center text-ds3-dark hover:text-ds3-gold font-medium transition-colors duration-300 text-shadow-sm text-sm sm:text-base">
+                Solicitar orçamento <ArrowRight size={16} className="ml-1" />
+              </a>
             </div>
           ))}
         </div>

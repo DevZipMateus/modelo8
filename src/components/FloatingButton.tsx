@@ -28,7 +28,7 @@ const FloatingButton = () => {
       {/* Contact Options */}
       <div className={`flex flex-col-reverse items-end mb-2 sm:mb-3 space-y-reverse space-y-1 sm:space-y-2 transition-all duration-500 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
         <a 
-          href="https://wa.me/552221412489" 
+          href="https://wa.me/5511987654321" 
           target="_blank" 
           rel="noopener noreferrer"
           className="flex items-center bg-ds3-dark text-ds3-gold px-3 sm:px-4 py-2 rounded-md shadow-lg hover:bg-ds3-dark/90 transition-all duration-300 gap-2 font-medium text-xs sm:text-sm"
@@ -37,14 +37,14 @@ const FloatingButton = () => {
         </a>
         
         <a 
-          href="tel:+552221412489" 
+          href="tel:+5511987654321" 
           className="flex items-center bg-ds3-dark text-ds3-gold px-3 sm:px-4 py-2 rounded-md shadow-lg hover:bg-ds3-dark/90 transition-all duration-300 gap-2 font-medium text-xs sm:text-sm"
         >
           <span className="mr-1">Ligar</span>
         </a>
         
         <a 
-          href="mailto:contato@d3sengenharia.com.br" 
+          href="mailto:vendas@safeguardepis.com.br" 
           className="flex items-center bg-ds3-dark text-ds3-gold px-3 sm:px-4 py-2 rounded-md shadow-lg hover:bg-ds3-dark/90 transition-all duration-300 gap-2 font-medium text-xs sm:text-sm"
         >
           <span className="mr-1">E-mail</span>
