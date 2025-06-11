@@ -1,36 +1,29 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Menu, X } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
-
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
     }
   };
-
-  return (
-    <>
+  return <>
       {/* Top Bar - Now scrolls with the page */}
       <div className="bg-ds3-dark text-white py-2">
         <div className="container-custom flex justify-end items-center gap-6">
-          <a href="tel:+552221412489" className="flex items-center text-sm hover:text-ds3-gold transition-colors">
-            <Phone size={16} className="mr-2" />
-            (22) 2141-2489
-          </a>
+          
           <a href="mailto:contato@d3sengenharia.com.br" className="flex items-center text-sm hover:text-ds3-gold transition-colors">
             <Mail size={16} className="mr-2" />
             contato@d3sengenharia.com.br
@@ -55,24 +48,16 @@ const Header = () => {
                   Soluções
                 </Link>
               </div>
-              <a 
-                href="#technology" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection('technology');
-                }}
-                className="nav-link text-white hover:text-ds3-gold cursor-pointer"
-              >
+              <a href="#technology" onClick={e => {
+              e.preventDefault();
+              scrollToSection('technology');
+            }} className="nav-link text-white hover:text-ds3-gold cursor-pointer">
                 Tecnologia
               </a>
-              <a 
-                href="#clients" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection('clients');
-                }}
-                className="nav-link text-white hover:text-ds3-gold cursor-pointer"
-              >
+              <a href="#clients" onClick={e => {
+              e.preventDefault();
+              scrollToSection('clients');
+            }} className="nav-link text-white hover:text-ds3-gold cursor-pointer">
                 Clientes
               </a>
               <Link to="#contact" className="nav-link text-white hover:text-ds3-gold">Contato</Link>
@@ -83,10 +68,7 @@ const Header = () => {
             </nav>
             
             {/* Mobile Menu Button */}
-            <button 
-              className="md:hidden text-white hover:text-ds3-gold focus:outline-none"
-              onClick={toggleMobileMenu}
-            >
+            <button className="md:hidden text-white hover:text-ds3-gold focus:outline-none" onClick={toggleMobileMenu}>
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -100,10 +82,7 @@ const Header = () => {
             <Link to="/" className="text-2xl font-semibold" onClick={() => setIsMobileMenuOpen(false)}>
               <img src="/lovable-uploads/b59f931d-d236-43bf-97a4-bea078868c6b.png" alt="DS3 Engenharia" className="h-12" />
             </Link>
-            <button 
-              className="text-white hover:text-ds3-gold focus:outline-none"
-              onClick={toggleMobileMenu}
-            >
+            <button className="text-white hover:text-ds3-gold focus:outline-none" onClick={toggleMobileMenu}>
               <X size={24} />
             </button>
           </div>
@@ -111,33 +90,21 @@ const Header = () => {
           <div className="flex flex-col space-y-6 text-lg">
             <Link to="/" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Sobre a DS3</Link>
             <Link to="#services" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Soluções</Link>
-            <a 
-              href="#technology" 
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('technology');
-              }}
-              className="text-white hover:text-ds3-gold cursor-pointer"
-            >
+            <a href="#technology" onClick={e => {
+            e.preventDefault();
+            scrollToSection('technology');
+          }} className="text-white hover:text-ds3-gold cursor-pointer">
               Tecnologia
             </a>
-            <a 
-              href="#clients" 
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('clients');
-              }}
-              className="text-white hover:text-ds3-gold cursor-pointer"
-            >
+            <a href="#clients" onClick={e => {
+            e.preventDefault();
+            scrollToSection('clients');
+          }} className="text-white hover:text-ds3-gold cursor-pointer">
               Clientes
             </a>
             <Link to="#contact" className="text-white hover:text-ds3-gold" onClick={() => setIsMobileMenuOpen(false)}>Contato</Link>
             
-            <Link 
-              to="/linha-profissional" 
-              className="bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-6 py-3 rounded font-medium transition-all text-center mt-4"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
+            <Link to="/linha-profissional" className="bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-6 py-3 rounded font-medium transition-all text-center mt-4" onClick={() => setIsMobileMenuOpen(false)}>
               VER SOLUÇÕES
             </Link>
           </div>
@@ -156,8 +123,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default Header;
