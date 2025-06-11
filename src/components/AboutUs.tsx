@@ -1,13 +1,10 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const AboutUs = () => {
-  return (
-    <>
+  return <>
       {/* Light Section - Somos Especialistas */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-transparent">
         <div className="container-custom">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             {/* Left Column - Content */}
@@ -65,11 +62,7 @@ const AboutUs = () => {
             <div className="lg:w-1/2">
               <div className="relative">
                 <div className="bg-ds3-gold/20 w-full h-full absolute -left-6 -top-6 rounded-lg"></div>
-                <img 
-                  src="public/lovable-uploads/6264b6b2-1969-4152-ad50-5b330a3c76dd.png" 
-                  alt="Trabalhadora em armazém com tablet" 
-                  className="relative z-10 rounded-lg shadow-lg w-full object-cover h-[400px]" 
-                />
+                <img src="public/lovable-uploads/6264b6b2-1969-4152-ad50-5b330a3c76dd.png" alt="Trabalhadora em armazém com tablet" className="relative z-10 rounded-lg shadow-lg w-full object-cover h-[400px]" />
               </div>
             </div>
           </div>
@@ -77,7 +70,7 @@ const AboutUs = () => {
       </section>
       
       {/* Dark Section - Nossa Tecnologia */}
-      <section id="technology" className="py-20 bg-ds3-dark text-white">
+      <section id="technology" className="py-20 text-white bg-transparent">
         <div className="container-custom">
           <div className="mb-12 text-center">
             <h2 className="text-4xl font-bold mb-6">Nossa Tecnologia</h2>
@@ -87,11 +80,7 @@ const AboutUs = () => {
             {/* Left Column - Image */}
             <div className="lg:w-1/2">
               <div className="relative">
-                <img 
-                  src="public/lovable-uploads/316e393f-ec3b-4147-a10b-0b6f433bf9b1.png" 
-                  alt="Trabalhador offshore com equipamento de proteção em plataforma petrolífera" 
-                  className="rounded-lg w-full object-cover h-[400px]" 
-                />
+                <img src="public/lovable-uploads/316e393f-ec3b-4147-a10b-0b6f433bf9b1.png" alt="Trabalhador offshore com equipamento de proteção em plataforma petrolífera" className="rounded-lg w-full object-cover h-[400px]" />
               </div>
             </div>
             
@@ -129,8 +118,6 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default AboutUs;

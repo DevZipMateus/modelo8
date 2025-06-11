@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Target, ThumbsUp, Users, Award, ShieldCheck, UserCheck } from 'lucide-react';
-
 const Team = () => {
-  return (
-    <section id="team" className="section bg-white py-20">
+  return <section id="team" className="section py-20 bg-transparent">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Nossa Missão */}
@@ -91,8 +88,6 @@ const Team = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Team;
