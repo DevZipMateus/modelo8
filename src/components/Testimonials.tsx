@@ -3,23 +3,23 @@ import React from 'react';
 
 const clients = [{
   id: 1,
-  name: 'Connectta Construções',
-  logo: '/lovable-uploads/b9950941-a70e-4ee7-a531-45cbe9bc9316.png',
+  name: 'Connecta Construções',
+  logo: '/lovable-uploads/ebddf75c-7017-4d4b-9b50-4f07a02300b6.png',
   logoPosition: 'object-center'
 }, {
   id: 2,
   name: 'STX Marine Service',
-  logo: '/lovable-uploads/927e0725-56fb-4463-befd-da92c342382b.png',
+  logo: '/lovable-uploads/d1aa02a6-86ac-4242-81ab-87000f020071.png',
   logoPosition: 'object-center'
 }, {
   id: 3,
   name: 'GB Consultoria',
-  logo: '/lovable-uploads/a8116b37-2da2-4557-843f-12e97c5e263a.png',
+  logo: '/lovable-uploads/2b49cfe4-7f8e-4c7a-abf2-bb13c38c6df2.png',
   logoPosition: 'object-center'
 }, {
   id: 4,
   name: 'LCD Engenharia',
-  logo: '/lovable-uploads/8bee2908-b9ca-44a1-b4db-e793722d1dce.png',
+  logo: '/lovable-uploads/5e396f3e-f563-4133-80ef-91d9a40a8247.png',
   logoPosition: 'object-center'
 }];
 
