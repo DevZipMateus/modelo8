@@ -21,16 +21,16 @@ const Hero = () => {
       
       <div className="container-custom relative z-10">
         <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold text-white text-shadow-header mb-8 animate-fade-in">
             Excelência em Proteção
           </h1>
           
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <Link to="/linha-profissional" className="bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-8 py-3 rounded font-medium text-lg transition-all">
+            <Link to="/linha-profissional" className="bg-ds3-gold hover:bg-ds3-gold/90 text-ds3-dark px-8 py-3 rounded font-medium text-lg transition-all text-shadow-sm">
               VER SOLUÇÕES
             </Link>
             
-            <Link to="#about" className="bg-transparent border border-white text-white hover:bg-white/10 px-8 py-3 rounded font-medium text-lg transition-all">
+            <Link to="#about" className="bg-transparent border border-white text-white hover:bg-white/10 px-8 py-3 rounded font-medium text-lg transition-all text-shadow">
               SOBRE A DS3
             </Link>
           </div>
@@ -41,21 +41,21 @@ const Hero = () => {
               <div className="w-12 h-12 mr-3 bg-ds3-gold/20 rounded-full flex items-center justify-center">
                 <img src="/lovable-uploads/87e15858-fe61-4896-852e-32125d20e4af.png" alt="Offshore" className="w-6 h-6 opacity-70" />
               </div>
-              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors">Enxovais Offshore & Onshore</span>
+              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors text-shadow">Enxovais Offshore & Onshore</span>
             </Link>
             
             <Link to="/enxoval-hospitalar" className="flex items-center bg-black/30 backdrop-blur-sm hover:bg-black/40 p-4 rounded-lg transition-all group">
               <div className="w-12 h-12 mr-3 bg-ds3-gold/20 rounded-full flex items-center justify-center">
                 <img src="/lovable-uploads/87e15858-fe61-4896-852e-32125d20e4af.png" alt="Hospital" className="w-6 h-6 opacity-70" />
               </div>
-              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors">Enxovais Hospitalares</span>
+              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors text-shadow">Enxovais Hospitalares</span>
             </Link>
             
             <Link to="/linha-profissional" className="flex items-center bg-black/30 backdrop-blur-sm hover:bg-black/40 p-4 rounded-lg transition-all group">
               <div className="w-12 h-12 mr-3 bg-ds3-gold/20 rounded-full flex items-center justify-center">
                 <img src="/lovable-uploads/87e15858-fe61-4896-852e-32125d20e4af.png" alt="Professional" className="w-6 h-6 opacity-70" />
               </div>
-              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors">Linha Profissional</span>
+              <span className="text-white font-medium group-hover:text-ds3-gold transition-colors text-shadow">Linha Profissional</span>
             </Link>
           </div>
         </div>
