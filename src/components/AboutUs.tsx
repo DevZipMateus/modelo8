@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const AboutUs = () => {
-  return (
-    <>
+  return <>
       {/* Light Section - Somos Especialistas */}
       <section id="about" className="py-12 sm:py-16 lg:py-20 bg-transparent">
         <div className="container-custom px-4">
@@ -65,11 +62,7 @@ const AboutUs = () => {
             <div className="lg:w-1/2 w-full">
               <div className="relative max-w-md mx-auto lg:max-w-none">
                 <div className="bg-ds3-gold/20 w-full h-full absolute -left-3 sm:-left-6 -top-3 sm:-top-6 rounded-lg"></div>
-                <img 
-                  src="public/lovable-uploads/6264b6b2-1969-4152-ad50-5b330a3c76dd.png" 
-                  alt="Trabalhadora em armazém com tablet" 
-                  className="relative z-10 rounded-lg shadow-lg w-full object-cover h-64 sm:h-80 lg:h-96" 
-                />
+                <img src="public/lovable-uploads/6264b6b2-1969-4152-ad50-5b330a3c76dd.png" alt="Trabalhadora em armazém com tablet" className="relative z-10 rounded-lg shadow-lg w-full object-cover h-64 sm:h-80 lg:h-96" />
               </div>
             </div>
           </div>
@@ -87,11 +80,7 @@ const AboutUs = () => {
             {/* Left Column - Image */}
             <div className="lg:w-1/2 w-full order-2 lg:order-1">
               <div className="relative max-w-md mx-auto lg:max-w-none">
-                <img 
-                  src="public/lovable-uploads/316e393f-ec3b-4147-a10b-0b6f433bf9b1.png" 
-                  alt="Trabalhador offshore com equipamento de proteção em plataforma petrolífera" 
-                  className="rounded-lg w-full object-cover h-64 sm:h-80 lg:h-96" 
-                />
+                <img alt="Trabalhador offshore com equipamento de proteção em plataforma petrolífera" className="rounded-lg w-full object-cover h-64 sm:h-80 lg:h-96" src="/lovable-uploads/a7843544-f0fb-403c-a7e1-040baedbbb2e.jpg" />
               </div>
             </div>
             
@@ -129,8 +118,6 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default AboutUs;
