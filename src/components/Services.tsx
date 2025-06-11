@@ -25,7 +25,7 @@ const services = [{
 }];
 const Services = () => {
   return <section id="services" className="section bg-transparent">
-      <div className="container-custom">
+      <div className="container-custom py-[29px]">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-ds3-gold/10 text-ds3-dark font-medium px-4 py-1.5 rounded-full text-sm mb-4 text-shadow-sm">
