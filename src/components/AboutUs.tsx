@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const AboutUs = () => {
   return <>
       {/* Light Section - Somos Especialistas */}
@@ -63,7 +61,7 @@ const AboutUs = () => {
             <div className="lg:w-1/2 w-full">
               <div className="relative max-w-md mx-auto lg:max-w-none">
                 <div className="bg-ds3-gold/20 w-full h-full absolute -left-3 sm:-left-6 -top-3 sm:-top-6 rounded-lg"></div>
-                <img src="public/lovable-uploads/6264b6b2-1969-4152-ad50-5b330a3c76dd.png" alt="Trabalhador com EPIs completos" className="relative z-10 rounded-lg shadow-lg w-full object-cover h-64 sm:h-80 lg:h-96" />
+                <img alt="Trabalhador com EPIs completos" className="relative z-10 rounded-lg shadow-lg w-full object-cover h-64 sm:h-80 lg:h-96" src="/lovable-uploads/fc1a51fc-819d-4256-80d4-f9905e0f4f9c.jpg" />
               </div>
             </div>
           </div>
@@ -121,5 +119,4 @@ const AboutUs = () => {
       </section>
     </>;
 };
-
 export default AboutUs;
