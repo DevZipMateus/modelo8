@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Shirt, Building, HeartPulse, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const services = [{
   id: 1,
   title: 'Linha Profissional',
@@ -25,10 +23,8 @@ const services = [{
   delay: '0.2s',
   link: '/enxoval-hospitalar'
 }];
-
 const Services = () => {
-  return (
-    <section id="services" className="section bg-transparent">
+  return <section id="services" className="section bg-transparent">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -38,7 +34,7 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-shadow-md">
             Soluções têxteis completas para seu negócio
           </h2>
-          <p className="text-gray-600 text-lg text-shadow">
+          <p className="text-lg text-shadow text-gray-950">
             Oferecemos produtos especializados para atender às necessidades específicas do seu setor, 
             com qualidade e personalização.
           </p>
@@ -46,12 +42,9 @@ const Services = () => {
         
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map(service => (
-            <div 
-              key={service.id} 
-              className="bg-white/90 backdrop-blur-sm rounded-lg p-8 border border-gray-100 shadow-sm hover:shadow-md hover:border-ds3-gold/30 transition-all duration-300 transform hover:scale-[1.02] animate-fade-in" 
-              style={{ animationDelay: service.delay }}
-            >
+          {services.map(service => <div key={service.id} style={{
+          animationDelay: service.delay
+        }} className="backdrop-blur-sm rounded-lg p-8 border border-gray-100 shadow-sm hover:shadow-md hover:border-ds3-gold/30 transition-all duration-300 transform hover:scale-[1.02] animate-fade-in bg-zinc-300">
               <div className="bg-ds3-gold/10 p-4 rounded-lg inline-block mb-5">
                 <service.icon className="text-ds3-dark" size={28} />
               </div>
@@ -60,8 +53,7 @@ const Services = () => {
               <Link to={service.link} className="inline-flex items-center text-ds3-dark hover:text-ds3-gold font-medium transition-colors duration-300 text-shadow-sm">
                 Saiba mais <ArrowRight size={16} className="ml-1" />
               </Link>
-            </div>
-          ))}
+            </div>)}
         </div>
         
         {/* CTA */}
@@ -72,8 +64,6 @@ const Services = () => {
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;

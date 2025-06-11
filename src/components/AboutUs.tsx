@@ -10,20 +10,20 @@ const AboutUs = () => {
             {/* Left Column - Content */}
             <div className="lg:w-1/2">
               <h2 className="text-4xl font-bold text-gray-900 mb-2">Somos Especialistas</h2>
-              <p className="text-gray-600 mb-6">
+              <p className="mb-6 text-gray-950">
                 Confecção de uniformes profissionais e diversas soluções para vários setores do mercado.
               </p>
               
               <div className="space-y-6 mb-6">
-                <p className="text-gray-600">
+                <p className="text-zinc-950">
                   Fabricamos uniformes personalizados com silk ou bordado, adaptados aos padrões e necessidades de cada cliente. 
                   Nossa linha de produtos inclui macacões, calças, jalecos, camisas e blusas polo (masculino e feminino), 
                   além de uniformes de proteção NR 10 Risco 2, especialmente projetados para garantir máxima segurança 
                   em ambientes de risco elétrico e atender aos rigorosos padrões da indústria.
                 </p>
                 
-                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-ds3-gold">
-                  <p className="text-gray-700">
+                <div className="p-6 rounded-lg border-l-4 border-ds3-gold bg-gray-300">
+                  <p className="text-zinc-950">
                     Oferecemos também uma linha completa de enxovais para o setor hospitalar, 
                     com itens como campo cirúrgico, avental cirúrgico e conjuntos especializados, 
                     todos produzidos com tecidos de alta durabilidade e resistência a lavagens industriais. 
@@ -42,7 +42,7 @@ const AboutUs = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">Soluções Personalizadas</h4>
-                    <p className="text-gray-600">Uniformes adaptados às necessidades específicas de cada cliente</p>
+                    <p className="text-zinc-950">Uniformes adaptados às necessidades específicas de cada cliente</p>
                   </div>
                 </div>
                 
@@ -52,7 +52,7 @@ const AboutUs = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">Qualidade e Segurança</h4>
-                    <p className="text-gray-600">Materiais de alta qualidade para durabilidade e proteção</p>
+                    <p className="text-zinc-950">Materiais de alta qualidade para durabilidade e proteção</p>
                   </div>
                 </div>
               </div>
@@ -73,7 +73,7 @@ const AboutUs = () => {
       <section id="technology" className="py-20 text-white bg-transparent">
         <div className="container-custom">
           <div className="mb-12 text-center">
-            <h2 className="text-4xl font-bold mb-6">Nossa Tecnologia</h2>
+            <h2 className="text-4xl font-bold mb-6 text-gray-900">Nossa Tecnologia</h2>
           </div>
           
           <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -86,7 +86,7 @@ const AboutUs = () => {
             
             {/* Right Column - Content */}
             <div className="lg:w-1/2 space-y-6">
-              <p>
+              <p className="text-zinc-950">
                 As roupas são confeccionadas com tecido 100% algodão tratado para garantir a 
                 proteção antichamas (contra fogo repentino e arco elétrico). A tecnologia conta 
                 com camisa, calça, macacão e jaqueta antichamas.
@@ -102,14 +102,14 @@ const AboutUs = () => {
                 </CardContent>
               </Card>
               
-              <p>
+              <p className="text-zinc-950">
                 O arco elétrico pode alcançar diversos níveis de intensidade do calor emitido, o 
                 que confere a necessidade de um ATPV nas vestimentas de acordo com a 
                 possível potência do calor gerado.
               </p>
               
               <div className="bg-ds3-gold/10 p-6 rounded-lg border-l-4 border-ds3-gold">
-                <p className="text-white">
+                <p className="text-zinc-950">
                   <strong>A regra para escolher a melhor opção é:</strong> quanto maior a intensidade de calor 
                   emitida pelo risco 2, maior deve ser o ATPV fornecido pelas vestimenta.
                 </p>
